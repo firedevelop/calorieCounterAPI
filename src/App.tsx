@@ -2,6 +2,7 @@ import { useMemo } from 'react'
 import Form from "./components/Form"
 import ActivityList from './components/ActivityList'
 import { useActivity } from './hooks/useActivity'
+import QuickActivityButtons from './components/QuickActivityButtons'
 
 function App() {
     const { state, dispatch, totalCalories } = useActivity()
@@ -28,6 +29,7 @@ function App() {
             <section className="bg-lime-500 py-20 px-5">
                 <div className="max-w-xl mx-auto">
                     <Form />
+                    <QuickActivityButtons /> {/* Añade aquí */}
                 </div>
             </section>
 
