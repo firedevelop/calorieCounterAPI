@@ -1,107 +1,47 @@
-import { useState, ChangeEvent, FormEvent, useEffect } from "react"
-import { v4 as uuidv4 } from 'uuid'
-import { categories } from "../data/categories"
-import type { Activity } from "../types"
+import { useState, FormEvent } from "react"
 import { useActivity } from "../hooks/useActivity"
 
-const initialState : Activity = {
-  id: uuidv4(),
-  category: 1,
-  name: '',
-  calories: 0
-}
-
 export default function Form() {
-
-  const { state, dispatch } = useActivity()
-  const [activity, setActivity] = useState<Activity>(initialState)
-
-  useEffect(() => {
-    if(state.activeId) {
-      const selectedActivity = state.activities.filter( stateActivity => stateActivity.id === state.activeId )[0]
-      setActivity(selectedActivity)
-    }
-  }, [state.activeId])
-
-  const handleChange = (e: ChangeEvent<HTMLSelectElement> | ChangeEvent<HTMLInputElement>) => {
-    const isNumberField = ['category', 'calories'].includes(e.target.id)
-
-    setActivity({
-      ...activity,
-      [e.target.id]: isNumberField ? +e.target.value : e.target.value
-    })
-  }
-
-  const isValidActivity = () => {
-    const { name, calories } = activity
-    return name.trim() !== '' && calories > 0
-  }
+  const { state, searchAndAddMeal } = useActivity()
+  const [searchTerm, setSearchTerm] = useState('')
  
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-
-    dispatch({type: 'save-activity', payload: {newActivity: activity}}) 
-    setActivity({
-      ...initialState,
-      id: uuidv4()
-    })
+    if (!searchTerm.trim()) return;
+    searchAndAddMeal(searchTerm);
+    setSearchTerm('');
   }
 
   return (
     <form 
       className="space-y-5 bg-white shadow p-10 rounded-lg"
+      style={{
+              backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/food-1.jpg')`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              color: "#fff",
+              padding: "2rem 1rem"
+            }}
       onSubmit={handleSubmit}
     >
       <div className="grid grid-cols-1 gap-3">
-          <label htmlFor="category" className="font-bold">Categoría:</label>
-          <select
-            className="border border-slate-300 p-2 rounded-lg w-full bg-white"
-            id="category"
-            value={activity.category}
-            onChange={handleChange}
-          >
-            {categories.map(category => (
-              <option
-                key={category.id}
-                value={category.id}
-              >
-                {category.name}
-              </option>
-            ))}
-          </select>
-      </div>
-
-      <div className="grid grid-cols-1 gap-3">
-          <label htmlFor="name" className="font-bold">Actividad:</label>
+          <label htmlFor="search" className="font-bold text-white">Buscar Comida:</label>
           <input
-            id="name"
+            id="search"
             type="text"
             className="border border-slate-300 p-2 rounded-lg"
-            placeholder="Ej. Comida, Jugo de Naranja, Ensalada, Ejercicio, Pesas, Bicicleta"
-            value={activity.name}
-            onChange={handleChange}
+            style={{ color: "#000" }}
+            placeholder="Ej: 1 cup of rice, 1 apple..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
           />
       </div>
-
-      <div className="grid grid-cols-1 gap-3">
-          <label htmlFor="calories" className="font-bold">Calorias:</label>
-          <input
-            id="calories"
-            type="number"
-            className="border border-slate-300 p-2 rounded-lg"
-            placeholder="Calorias. ej. 300 o 500"
-            value={activity.calories}
-            onChange={handleChange}
-          />
-      </div>
-
       <input
         type="submit"
-        className="bg-gray-800 hover:bg-gray-900 w-full p-2 font-bold uppercase text-white cursor-pointer disabled:opacity-10"
-        value={activity.category === 1 ? 'Guardar Comida' : 'Guardar Ejercicio'}
-        disabled={!isValidActivity()}
+        className="bg-orange-700 hover:bg-orange-600 w-full p-2 uppercase text-white cursor-pointer disabled:opacity-90"
+        value={state.loading ? 'Buscando...' : 'Añadir Comida'}
+        disabled={state.loading || !searchTerm.trim()}
       />
-
     </form>
   )
 }
