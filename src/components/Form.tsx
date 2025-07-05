@@ -20,7 +20,7 @@ export default function Form() {
               backgroundSize: "cover",
               backgroundPosition: "center",
               color: "#fff",
-              padding: "0.5rem 1rem"
+              padding: "2rem 1rem"
             }}
       onSubmit={handleSubmit}
     >

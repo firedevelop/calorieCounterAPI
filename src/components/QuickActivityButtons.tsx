@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { useActivity } from "../hooks/useActivity"
 
-const activities = ["Correr", "Nadar", "Boxeo", "Pesas"]
+const activities = ["Running", "Swimming", "Boxing", "Weights"]
 const calorieOptions = [5, 10, 25, 50, 100]
 
 export default function QuickExerciseCalculator() {
@@ -25,11 +25,12 @@ export default function QuickExerciseCalculator() {
         <div
             className="my-6 p-4 rounded shadow"
             style={{
-                backgroundImage: `linear-gradient(rgba(0, 0, 0, 7), rgba(0,0,0,0.0)), url('/fitness.jpg')`,
+                backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.0)), url('/fitness.jpg')`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 backgroundColor: "#000",
-                color: "#fff"
+                color: "#fff",
+                padding: "4rem 1rem"
             }}
         >
             <div className="mb-2">
@@ -48,7 +49,7 @@ export default function QuickExerciseCalculator() {
                 {calorieOptions.map(opt => (
                     <button
                         key={opt}
-                        className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded"
+                        className="bg-yellow-700 hover:bg-yellow-600 text-white px-3 py-1 rounded"
                         onClick={() => handleAddCalories(opt)}
                     >
                         +{opt}

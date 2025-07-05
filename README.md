@@ -40,6 +40,4 @@ Photo by <a href="https://unsplash.com/@annapelzer?utm_content=creditCopyText&ut
 Photo by <a href="https://unsplash.com/@chrismoroz?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Christina Moroz</a> on <a href="https://unsplash.com/photos/woman-in-black-tank-top-and-blue-denim-jeans-sitting-on-brown-wooden-bench-during-daytime-CBHwsbwpTKA?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
       
 
-Logo: <a href="https://www.freepik.com/free-vector/fitness-center-logo-design-template_35897801.htm#fromView=keyword&page=1&position=19&uuid=bd785584-eadb-4377-aaf0-1e9f224df9d0&query=Fitness+Logo">Image by freepik</a>
-
-<a href="https://www.freepik.com/free-vector/flat-design-fitness-logo-template_4985595.htm#fromView=keyword&page=1&position=9&uuid=bd785584-eadb-4377-aaf0-1e9f224df9d0&query=Fitness+Logo">Image by freepik</a>
+<a href="https://www.freepik.com/free-vector/fitness-center-logo-design-template_35897801.htm#fromView=keyword&page=1&position=19&uuid=bd785584-eadb-4377-aaf0-1e9f224df9d0&query=Fitness+Logo">Image by freepik</a>
