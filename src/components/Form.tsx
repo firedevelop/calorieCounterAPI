@@ -15,14 +15,22 @@ export default function Form() {
   return (
     <form 
       className="space-y-5 bg-white shadow p-10 rounded-lg"
+      style={{
+              backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/food-1.jpg')`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              color: "#fff",
+              padding: "0.5rem 1rem"
+            }}
       onSubmit={handleSubmit}
     >
       <div className="grid grid-cols-1 gap-3">
-          <label htmlFor="search" className="font-bold text-gray-700">Buscar Comida:</label>
+          <label htmlFor="search" className="font-bold text-white">Buscar Comida:</label>
           <input
             id="search"
             type="text"
             className="border border-slate-300 p-2 rounded-lg"
+            style={{ color: "#000" }}
             placeholder="Ej: 1 cup of rice, 1 apple..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
@@ -30,7 +38,7 @@ export default function Form() {
       </div>
       <input
         type="submit"
-        className="bg-gray-800 hover:bg-gray-900 w-full p-2 font-bold uppercase text-white cursor-pointer disabled:opacity-50"
+        className="bg-orange-700 hover:bg-orange-600 w-full p-2 uppercase text-white cursor-pointer disabled:opacity-90"
         value={state.loading ? 'Buscando...' : 'Añadir Comida'}
         disabled={state.loading || !searchTerm.trim()}
       />

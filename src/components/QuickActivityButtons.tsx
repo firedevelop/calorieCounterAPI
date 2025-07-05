@@ -22,11 +22,20 @@ export default function QuickExerciseCalculator() {
     }
 
     return (
-        <div className="my-6 p-4 bg-white rounded shadow">
+        <div
+            className="my-6 p-4 rounded shadow"
+            style={{
+                backgroundImage: `linear-gradient(rgba(0, 0, 0, 7), rgba(0,0,0,0.0)), url('/fitness.jpg')`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundColor: "#000",
+                color: "#fff"
+            }}
+        >
             <div className="mb-2">
                 <span className="font-semibold mr-2">Actividad:</span>
                 <select
-                    className="border rounded px-2 py-1"
+                    className="border rounded px-2 py-1 text-black"
                     value={selectedActivity}
                     onChange={e => setSelectedActivity(e.target.value)}
                 >
@@ -56,11 +65,11 @@ export default function QuickExerciseCalculator() {
                 <span className="font-semibold">Calorías seleccionadas:</span> {calories}
             </div>
             <button
-                className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded disabled:opacity-50"
+                className="bg-orange-700 hover:bg-orange-600 text-white w-full py-2 rounded disabled:opacity-90"
                 disabled={calories === 0}
                 onClick={handleAddExercise}
             >
-                Añadir Ejercicio
+                AÑADIR ACTIVIDAD
             </button>
         </div>
     )
