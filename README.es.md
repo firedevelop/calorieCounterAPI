@@ -1,3 +1,4 @@
+![Captura de Pantalla de Calorie Counter](./public/screen-1.png)
 <div align="center">
   <a href="README.md">English</a> | <a href="README.es.md">Español</a>
 </div>
@@ -24,9 +25,7 @@
   </a>
 </p>
 
-## 📸 Captura de Pantalla
 
-![Captura de Pantalla de Calorie Counter](./public/screen-1.png)
 
 ## 📝 Descripción del Proyecto
 

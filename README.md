@@ -1,3 +1,4 @@
+![Calorie Counter Screenshot](./public/screen-1.png)
 <div align="center">
   <a href="README.es.md">Español</a> | <a href="README.md">English</a>
 </div>
@@ -24,9 +25,7 @@
   </a>
 </p>
 
-## 📸 Screenshot
 
-![Calorie Counter Screenshot](./public/screen-1.png)
 
 ## 📝 Project Description
 
