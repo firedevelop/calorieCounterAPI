@@ -41,6 +41,9 @@ type ActivityContextProps = {
     dispatch: Dispatch<AppAction>;
     searchAndAddMeal: (searchTerm: string) => Promise<void>;
     totalCalories: number;
+    caloriesConsumed: number; // add
+    caloriesBurned: number;   // add
+    netCalories: number;      // add
 };
 
 export const ActivityContext = createContext<ActivityContextProps>(null!);
@@ -49,6 +52,9 @@ export const ActivityProvider = ({ children }: { children: ReactNode }) => {
     const [state, dispatch] = useReducer(mealsReducer, initialState);
 
     const totalCalories = useMemo(() => state.meals.reduce((total, meal) => total + meal.calories, 0), [state.meals]);
+    const caloriesConsumed = totalCalories;
+    const caloriesBurned = 0; // or calculate if you have activities
+    const netCalories = caloriesConsumed - caloriesBurned;
 
     const searchAndAddMeal = async (searchTerm: string) => {
         dispatch({ type: 'FETCH_START' });
@@ -82,7 +88,10 @@ export const ActivityProvider = ({ children }: { children: ReactNode }) => {
             state,
             dispatch,
             searchAndAddMeal,
-            totalCalories
+            totalCalories,
+            caloriesConsumed,
+            caloriesBurned,
+            netCalories
         }}>
             {children}
         </ActivityContext.Provider>
