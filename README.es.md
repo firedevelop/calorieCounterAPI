@@ -24,6 +24,10 @@
   </a>
 </p>
 
+## 📸 Captura de Pantalla
+
+![Captura de Pantalla de Calorie Counter](./public/screen-1.png)
+
 ## 📝 Descripción del Proyecto
 
 **Calorie Counter** es una aplicación web responsiva que permite a los usuarios llevar un control de su ingesta calórica y su gasto energético a través del ejercicio. La aplicación calcula automáticamente el balance calórico neto, ofreciendo una visión clara del progreso diario.
@@ -73,9 +77,6 @@ Sigue estos pasos para ejecutar el proyecto en tu entorno local:
    ```
    La aplicación estará disponible en `http://localhost:5173` (o el puerto que indique Vite).
 
-## 📸 Captura de Pantalla
-
-![Captura de Pantalla de Calorie Counter](./public/screen-1.png)
 
 ## 📄 Créditos
 

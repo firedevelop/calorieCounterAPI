@@ -24,6 +24,10 @@
   </a>
 </p>
 
+## 📸 Screenshot
+
+![Calorie Counter Screenshot](./public/screen-1.png)
+
 ## 📝 Project Description
 
 **Calorie Counter** is a responsive web application that allows users to track their caloric intake and energy expenditure through exercise. The application automatically calculates the net calorie balance, providing a clear overview of daily progress.
@@ -73,9 +77,6 @@ Follow these steps to run the project in your local environment:
    ```
    The application will be available at `http://localhost:5173` (or the port indicated by Vite).
 
-## 📸 Screenshot
-
-![Calorie Counter Screenshot](./public/screen-1.png)
 
 ## 📄 Credits
 
