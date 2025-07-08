@@ -19,7 +19,7 @@
 </p>
 
 <p align="center">
-  <a href="https://your-live-preview-url.com" target="_blank">
+  <a href="https://calorie-counter-api-usereducer.netlify.app" target="_blank">
     <img src="https://img.shields.io/badge/Live_Preview-28B2A8?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Preview" />
   </a>
 </p>
@@ -79,10 +79,10 @@ Follow these steps to run the project in your local environment:
 
 ## 📄 Credits
 
-- Made with ❤️ by fireDevelop.
-- Background images by Sven Mieke, Anna Pelzer, and Edgar Chaparro on Unsplash.
-- Logo por freepik.
-- Powered by <a href="https://www.nutritionix.com/" className="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">Nutritionix</a>
+- Made with ❤️ by [fireDevelop](https://github.com/fireDevelop).
+- Background images by [Sven Mieke](https://unsplash.com/@sxoxm), [Anna Pelzer](https://unsplash.com/@annapelzer), and [Edgar Chaparro](https://unsplash.com/@echaparro) on Unsplash.
+- Logo by [freepik](https://www.freepik.com/free-vector/fitness-center-logo-design-template_35897801.htm#fromView=keyword&page=1&position=19&uuid=bd785584-eadb-4377-aaf0-1e9f224df9d0).
+- Powered by [Nutritionix](https://www.nutritionix.com/).
 
-## Project ID
+## 🆔 Project ID
 id0000569
